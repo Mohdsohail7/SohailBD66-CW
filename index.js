@@ -10,7 +10,7 @@ app.use(express.json());
 
 // home route
 app.get('/', (req, res) => {
-  res.send(`<h1>This is Home page </h1>`);
+  res.send(`<h1>This is BD6.6 - CW </h1>`);
 });
 // Exercise 1: Retrieve All Employees
 // Objective: Retrieve all employees from the database.
@@ -26,7 +26,7 @@ app.get('/employees', async (req, res) => {
 // Query Parameters: id - The ID of the employee to retrieve.
 // Tasks: Implement a function to return an employee based on their ID and ensure the correct data format is returned.
 app.get('/employees/details/:id', async (req, res) => {
-  const employee = getEmployeeById(parseInt(req.params.id));
+  const employee = await getEmployeeById(parseInt(req.params.id));
   res.json({ employee });
 });
 

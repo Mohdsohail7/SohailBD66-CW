@@ -22,11 +22,11 @@ let employees = [
   },
 ];
 
-function getAllEmployees() {
+async function getAllEmployees() {
     return employees;
 }
 
-function getEmployeeById(id) {
+async function getEmployeeById(id) {
     return employees.find((emp) => emp.employeeId === id);
 }
 
